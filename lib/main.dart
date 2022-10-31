@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tim_ui_kit/business_logic/view_models/tui_chat_global_model.dart';
+import 'package:tim_ui_kit/ui/views/TIMUIKitChat/tim_uikit_chat.dart';
 
 void main() {
   runApp(const MyApp());
@@ -95,6 +97,11 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            TIMUIKitChat(
+              conversationID: 'conversationID',
+              conversationType: ConvType.group,
+              conversationShowName: 'conversationShowName',
+            ),
             const Text(
               'You have pushed the button this many times:',
             ),
